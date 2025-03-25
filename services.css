@@ -1,0 +1,26 @@
+/* -------------------------------------------
+   BOOTSTRAP OVERRIDES & CUSTOM CLASSES
+---------------------------------------------- */
+
+/* Brand colors */
+:root {
+    --primary-blue: #1f438f;
+    --secondary-blue: #3757a2;
+    --light-bg: #f9fbf7;
+  }
+  
+  .bg-primary-blue {
+    background-color: var(--primary-blue) !important;
+  }
+  
+  /* Page-Specific Styles (Services page) */
+  section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  section ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+  

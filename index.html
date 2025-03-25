@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Stuart Marine Ltd - Home Page" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stuart Marine Ltd | Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    crossorigin="anonymous"
+  />
+
+  <!-- Page-Specific CSS -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- HEADER & NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-uppercase" href="index.html">Stuart Marine</a>
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#mainNav" 
+          aria-controls="mainNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero d-flex align-items-center text-white">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">Welcome to Stuart Marine Ltd</h1>
+      <p class="lead my-4">
+        Your trusted Marine Engineering Company serving both leisure and commercial marine industries.
+      </p>
+      <a href="about.html" class="btn btn-secondary-blue btn-lg">Learn More</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Professional Marine Engineering Services</h2>
+      <p class="lead">
+        We are based on the idyllic Isle of Anglesey and cater for all aspects of marine engineering,
+        from routine engine services to full re-builds and new installations.
+      </p>
+    </div>
+  </section>
+
+  <!-- THREE-COLUMNS SECTION (Bootstrap row/cols) -->
+  <section class="py-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Engine Services</h3>
+              <p class="card-text">
+                From routine maintenance to complete overhauls, we ensure your engines run smoothly and safely.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Mobile Repairs</h3>
+              <p class="card-text">
+                Our mobile service covers North Wales (and further), fixing problems in situ whenever possible.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Welding &amp; Fabrication</h3>
+              <p class="card-text">
+                We undertake welding and fabrication in all metals, working closely with you from design to completion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Customers Say</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p><strong>Michael Carvill (5 stars):</strong> “Good company, very helpful...couldn’t have been more helpful. Thank you!”</p>
+          <p><strong>Mark Evans (5 stars):</strong> “Spot on thanks!”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-blue text-white pt-4">
+    <div class="container">
+      <div class="row">
+        <!-- Address -->
+        <div class="col-md-6 mb-3">
+          <h4>Stuart Marine Ltd</h4>
+          <p>
+            Unit 18A Penrhos Industrial Estate<br>
+            Holyhead, Anglesey, UK, LL65 2FD
+          </p>
+          <p>Phone: 07970 705283<br>
+             Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white">info@stuartmarine.co.uk</a>
+          </p>
+        </div>
+        <!-- Social Media -->
+        <div class="col-md-6 mb-3">
+          <h4>Social Media</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/people/Stuart-Marine/100057183290470" class="text-white" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/Clankie_" class="text-white" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/stuart-cramp-7665461a3" class="text-white" target="_blank">LinkedIn</a></li>
+            <li><a href="https://g.co/kgs/zzsw94s" class="text-white" target="_blank">Google Business</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3 footer-bottom">
+        &copy; <span id="year"></span> Stuart Marine Ltd. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    crossorigin="anonymous">
+  </script>
+  <!-- Current Year in Footer -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

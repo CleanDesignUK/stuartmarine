@@ -1,0 +1,77 @@
+/* -------------------------------------------
+   BOOTSTRAP OVERRIDES & CUSTOM CLASSES
+---------------------------------------------- */
+
+/* Brand colors */
+:root {
+    --primary-blue: #1f438f;
+    --secondary-blue: #3757a2;
+    --light-bg: #f9fbf7;
+}
+
+/* NAV & FOOTER BACKGROUND */
+.bg-primary-blue {
+    background-color: var(--primary-blue) !important;
+}
+
+/* Make navbar thicker by adding vertical padding */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Secondary brand button style */
+.btn-secondary-blue {
+    background-color: var(--secondary-blue);
+    color: #fff;
+    border: none;
+}
+.btn-secondary-blue:hover {
+    background-color: #2c4e8b;
+}
+
+/* -------------------------------------------
+   HERO SECTION
+---------------------------------------------- */
+.hero-section {
+    position: relative;
+    background: url("contact-hero.jpg") center/cover no-repeat;
+    min-height: 60vh;
+}
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+}
+.hero-section .container {
+    position: relative; /* to appear above overlay */
+    z-index: 2;
+}
+.hero-section h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 80px 0 40px;
+}
+
+/* -------------------------------------------
+   CONTACT FORM
+---------------------------------------------- */
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-form form label {
+    font-weight: 600;
+}
+
+/* -------------------------------------------
+   FOOTER
+---------------------------------------------- */
+footer h4 {
+    margin-bottom: 10px;
+}
