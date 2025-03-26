@@ -12,17 +12,32 @@
     rel="stylesheet" 
     crossorigin="anonymous"
   />
+  <!-- Bootstrap Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
 
   <!-- Page-Specific CSS -->
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <!-- HEADER & NAVBAR -->
+  <!-- HEADER & NAVBAR (same style as About page) with sticky-top added -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold text-uppercase" href="index.html">Stuart Marine</a>
+        <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="index.html">
+          <!-- Logo (img-fluid), only text on lg+ screens -->
+          <img 
+            src="stuart-marine-logo.jpg" 
+            alt="Stuart Marine Logo" 
+            width="150" 
+            height="40" 
+            class="d-inline-block me-2 img-fluid"
+          />
+          <span class="d-none d-lg-inline">Stuart Marine</span>
+        </a>
         <button 
           class="navbar-toggler" 
           type="button" 
@@ -42,8 +57,26 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
+            <!-- Dropdown for Services -->
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle" 
+                href="#" 
+                id="servicesDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Routine Engine Service</a></li>
+                <li><a class="dropdown-item" href="#">Mobile Repair</a></li>
+                <li><a class="dropdown-item" href="#">Welding &amp; Fabrication</a></li>
+                <li><a class="dropdown-item" href="#">Engine Overhauls</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
@@ -54,119 +87,405 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero d-flex align-items-center text-white">
-    <div class="container text-center">
-      <h1 class="display-5 fw-bold">Welcome to Stuart Marine Ltd</h1>
-      <p class="lead my-4">
-        Your trusted Marine Engineering Company serving both leisure and commercial marine industries.
-      </p>
-      <a href="about.html" class="btn btn-secondary-blue btn-lg">Learn More</a>
+  <!-- HERO SECTION (Bootstrap carousel with overlay, arrows, and dots, with images) -->
+  <section class="hero-section position-relative">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators (dots) -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="hero-1.jpg" class="d-block w-100" alt="Hero Slide 1" />
+          <div class="hero-overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-5 fw-bold">Welcome to Stuart Marine</h1>
+            <p class="lead mb-4">Serving both leisure and commercial marine industries.</p>
+            <a href="services.html" class="btn btn-secondary-blue btn-lg">Our Services</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="hero-2.jpg" class="d-block w-100" alt="Hero Slide 2" />
+          <div class="hero-overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-5 fw-bold">Innovative Marine Solutions</h1>
+            <p class="lead mb-4">Expert engineering for your vessel’s needs.</p>
+            <a href="about.html" class="btn btn-secondary-blue btn-lg">Learn More</a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="hero-3.jpg" class="d-block w-100" alt="Hero Slide 3" />
+          <div class="hero-overlay"></div>
+          <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+            <h1 class="display-5 fw-bold">Contact Us</h1>
+            <p class="lead mb-4">We’re ready to discuss your marine projects.</p>
+            <a href="contact.html" class="btn btn-secondary-blue btn-lg">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <section class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Professional Marine Engineering Services</h2>
-      <p class="lead">
-        We are based on the idyllic Isle of Anglesey and cater for all aspects of marine engineering,
-        from routine engine services to full re-builds and new installations.
-      </p>
-    </div>
-  </section>
-
-  <!-- THREE-COLUMNS SECTION (Bootstrap row/cols) -->
-  <section class="py-3">
+  <!-- SECOND SECTION (Marine Engineering Company on the right, image on the left) -->
+  <section class="about-home-section mt-5 py-5">
     <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Image on the LEFT -->
+        <div class="col-lg-6 text-center">
+          <img src="about-hero.jpg" alt="Marine blueprint" class="img-fluid rounded" />
+        </div>
+        <!-- Text on the RIGHT -->
+        <div class="col-lg-6">
+          <h2>Marine Engineering Company</h2>
+          <p class="mb-1 text-muted">Founded in 19XX</p>
+          <p>
+            Stuart Marine has been delivering top-tier marine engineering services for both commercial and leisure vessels.
+            Our commitment to innovation and customer satisfaction drives everything we do, from routine engine servicing to complex overhauls.
+          </p>
+          <div class="mt-4">
+            <a href="about.html" class="btn btn-outline-primary me-3">Read More</a>
+            <a href="contact.html" class="btn btn-secondary-blue">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEALERSHIPS SECTION (with placeholder logos) -->
+  <section class="py-5 dealerships-section">
+    <div class="container text-center">
+      <h2 class="mb-4">Dealerships</h2>
+      <p class="mb-5">
+        Stuart Marine is proud to partner with top engine and parts manufacturers, ensuring quality solutions for every vessel.
+      </p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <!-- Example placeholders for logos -->
+        <div class="col">
+          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
+            <img src="beta-marine-logo.jpg" alt="Beta Marine Logo" style="max-width: 100px;" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
+            <img src="mermaid-marine-logo.png" alt="Mermaid Marine Logo" style="max-width: 100px;" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
+            <img src="grfn_logoB.png" alt="Griffin Logo" style="max-width: 100px;" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
+            <img src="oxe-marine-logo.jpeg" alt="Oxe Marine Logo" style="max-width: 100px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION (with clickable overlay for Routine Engine Service, same structure for all columns) -->
+  <section class="services-home-section py-5 text-white position-relative">
+    <!-- Curved line background + brand color -->
+    <div class="services-bg"></div>
+    <div class="container position-relative">
+      <!-- Title & Subtitle -->
+      <p class="text-uppercase small-heading mb-2">Services</p>
+      <h2 class="fw-bold mb-5">Explore Our Services</h2>
+      <!-- 3 columns with images & overlays -->
       <div class="row g-4">
+        <!-- Column 1 -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title">Engine Services</h3>
-              <p class="card-text">
-                From routine maintenance to complete overhauls, we ensure your engines run smoothly and safely.
-              </p>
+          <a href="services.html" class="text-decoration-none">
+            <div class="project-card position-relative overflow-hidden">
+              <img src="engine-overhauls-1.jpg" class="img-fluid w-100 project-img" alt="Routine Engine Service" />
+              <div class="project-dark-overlay"></div>
+              <div class="project-overlay-top position-absolute overlay-white">
+                Routine Engine Service
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-md-4">
+          <div class="project-card position-relative overflow-hidden">
+            <img src="mobile-repair-1.jpg" class="img-fluid w-100 project-img" alt="Service 2" />
+            <div class="project-dark-overlay"></div>
+            <div class="project-overlay-top position-absolute overlay-white">
+              Roads
             </div>
           </div>
         </div>
+        <!-- Column 3 -->
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title">Mobile Repairs</h3>
-              <p class="card-text">
-                Our mobile service covers North Wales (and further), fixing problems in situ whenever possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h3 class="card-title">Welding &amp; Fabrication</h3>
-              <p class="card-text">
-                We undertake welding and fabrication in all metals, working closely with you from design to completion.
-              </p>
+          <div class="project-card position-relative overflow-hidden">
+            <img src="engine-service-1.jpg" class="img-fluid w-100 project-img" alt="Service 3" />
+            <div class="project-dark-overlay"></div>
+            <div class="project-overlay-top position-absolute overlay-white">
+              Petroleum
             </div>
           </div>
         </div>
       </div>
+      <!-- View All Services button -->
+      <div class="text-end mt-4">
+        <a href="services.html" class="btn btn-light">View All Services</a>
+      </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="py-5 bg-light">
+  <!-- REVIEWS SECTION (Carousel with multiple slides, increased top & bottom padding) -->
+  <section class="reviews-section py-6">
     <div class="container">
-      <h2 class="text-center mb-4">What Our Customers Say</h2>
+      <h2 class="text-center mb-4">Our Clients Speak</h2>
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Original Review 1 (highlighted) -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="p-4 border rounded-3 shadow-sm">
+                  <p class="mb-1"><strong>Michael Carvill (5 stars)</strong></p>
+                  <p class="text-muted mb-2">Original Review</p>
+                  <p>
+                    “Good company, very helpful...couldn’t have been more helpful. Thank you!”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Original Review 2 (highlighted) -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="p-4 border rounded-3 shadow-sm">
+                  <p class="mb-1"><strong>Mark Evans (5 stars)</strong></p>
+                  <p class="text-muted mb-2">Original Review</p>
+                  <p>
+                    “Spot on thanks!”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fake Review 1 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="p-4 border rounded-3 shadow-sm">
+                  <p class="mb-1"><strong>Esther Howard</strong></p>
+                  <p class="text-muted mb-2">Marine Vessel Owner</p>
+                  <p>
+                    “Stuart Marine overhauled my boat’s engine, and it runs like new! Their attention to detail and quick turnaround were outstanding.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fake Review 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="p-4 border rounded-3 shadow-sm">
+                  <p class="mb-1"><strong>Cameron Williamson</strong></p>
+                  <p class="text-muted mb-2">Commercial Fleet Manager</p>
+                  <p>
+                    “We rely on Stuart Marine for mobile repairs on our fleet. They always show up on time and get us back on the water fast.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (each item in border with visible background) -->
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="mb-2 text-uppercase small-heading text-white">A WORD FROM OUR CUSTOMERS</p>
+        <h2 class="fw-bold text-white">FAQ's</h2>
+      </div>
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <p><strong>Michael Carvill (5 stars):</strong> “Good company, very helpful...couldn’t have been more helpful. Thank you!”</p>
-          <p><strong>Mark Evans (5 stars):</strong> “Spot on thanks!”</p>
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center p-3 border rounded">
+              <span class="fw-semibold">What industries do you serve?</span>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer px-3 pb-3 border-bottom border-start border-end">
+              <p class="mb-0">
+                We work with both leisure and commercial marine sectors, providing comprehensive engineering solutions for various vessel types.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center p-3 border rounded">
+              <span class="fw-semibold">Do you provide mobile repairs or on-site service?</span>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer px-3 pb-3 border-bottom border-start border-end">
+              <p class="mb-0">
+                Yes. We offer a mobile repair service covering North Wales and beyond, fixing issues on-site whenever possible to get you back on the water quickly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center p-3 border rounded">
+              <span class="fw-semibold">Are you authorized dealers for specific marine engine brands?</span>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer px-3 pb-3 border-bottom border-start border-end">
+              <p class="mb-0">
+                We are independent Volvo Penta Specialists and main agents for various marine engine brands. We also supply genuine parts and new engines with full factory backup.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center p-3 border rounded">
+              <span class="fw-semibold">How can I schedule a service or request a quote?</span>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer px-3 pb-3 border-bottom border-start border-end">
+              <p class="mb-0">
+                You can fill out our contact form or call us directly. We’ll arrange a convenient time to assess or service your vessel.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item mb-3">
+            <div class="faq-question d-flex justify-content-between align-items-center p-3 border rounded">
+              <span class="fw-semibold">Do you handle electrical and GRP repairs?</span>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="faq-answer px-3 pb-3 border-bottom border-start border-end">
+              <p class="mb-0">
+                Yes, we can tackle electrical issues and GRP work. Our team is equipped to diagnose wiring problems and repair fiberglass damage.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (same style as About page) -->
   <footer class="bg-primary-blue text-white pt-4">
     <div class="container">
       <div class="row">
         <!-- Address -->
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <h4>Stuart Marine Ltd</h4>
           <p>
             Unit 18A Penrhos Industrial Estate<br>
             Holyhead, Anglesey, UK, LL65 2FD
           </p>
-          <p>Phone: 07970 705283<br>
-             Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white">info@stuartmarine.co.uk</a>
+          <p>
+            Phone: <a href="tel:07970705283" class="text-white text-decoration-none">07970 705283</a><br>
+            Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white text-decoration-none">info@stuartmarine.co.uk</a>
           </p>
         </div>
-        <!-- Social Media -->
-        <div class="col-md-6 mb-3">
-          <h4>Social Media</h4>
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h4>Quick Links</h4>
           <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/people/Stuart-Marine/100057183290470" class="text-white" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/Clankie_" class="text-white" target="_blank">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/stuart-cramp-7665461a3" class="text-white" target="_blank">LinkedIn</a></li>
-            <li><a href="https://g.co/kgs/zzsw94s" class="text-white" target="_blank">Google Business</a></li>
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="col-md-4 mb-3">
+          <h4>Follow Us</h4>
+          <ul class="list-unstyled d-flex gap-3 mt-2">
+            <li>
+              <a href="https://www.facebook.com/people/Stuart-Marine/100057183290470" class="text-white fs-4" target="_blank">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/Clankie_" class="text-white fs-4" target="_blank">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/stuart-cramp-7665461a3" class="text-white fs-4" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://g.co/kgs/zzsw94s" class="text-white fs-4" target="_blank">
+                <i class="bi bi-google"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div class="text-center mt-3 footer-bottom">
-        &copy; <span id="year"></span> Stuart Marine Ltd. All rights reserved.
+        © 2025 Stuart Marine Ltd<br>
+        <a href="https://www.cleandesignuk.com" target="_blank" class="text-white text-decoration-none">
+          Website design by Clean Design UK
+        </a>
       </div>
     </div>
   </footer>
 
   <!-- Bootstrap JS Bundle -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-    crossorigin="anonymous">
-  </script>
-  <!-- Current Year in Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- FAQ Toggle Script -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const toggleIcon = item.querySelector('.toggle-icon');
+      answer.style.display = 'none';
+      question.addEventListener('click', () => {
+        if (answer.style.display === 'none') {
+          answer.style.display = 'block';
+          toggleIcon.textContent = '-';
+        } else {
+          answer.style.display = 'none';
+          toggleIcon.textContent = '+';
+        }
+      });
+    });
   </script>
 </body>
 </html>

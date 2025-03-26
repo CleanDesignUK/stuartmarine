@@ -1,42 +1,238 @@
-/* -------------------------------------------
+/* ------------------------------------------------
    BOOTSTRAP OVERRIDES & CUSTOM CLASSES
----------------------------------------------- */
+--------------------------------------------------- */
 
 /* Brand colors */
 :root {
-    --primary-blue: #1f438f;
-    --secondary-blue: #3757a2;
-    --light-bg: #f9fbf7;
-  }
-  
-  /* Make .bg-primary-blue use our brand color */
-  .bg-primary-blue {
-    background-color: var(--primary-blue) !important;
-  }
-  .btn-secondary-blue {
-    background-color: var(--secondary-blue);
-    color: #fff;
-    border: none;
-  }
-  .btn-secondary-blue:hover {
-    background-color: #2c4e8b;
-  }
-  
-  /* HERO SECTION */
-  .hero {
-    background: var(--primary-blue) url("https://via.placeholder.com/1200x600") center/cover no-repeat;
-    min-height: 60vh;
-  }
-  
-  /* Footer small adjustments (optional) */
-  .footer-bottom {
-    font-size: 0.875rem;
-  }
-  
-  /* Responsive design enhancements (any custom media queries if needed) */
-  @media (max-width: 576px) {
-    .hero {
-      min-height: 50vh;
-    }
-  }
-  
+  --primary-blue: #1f438f;
+  --secondary-blue: #3757a2;
+  --light-bg: #f9fbf7;
+  --faq-blue: #3757a2; /* New variable for FAQ background */
+}
+
+/* Set a white background for the page */
+body {
+  background-color: #fff;
+}
+
+/* NAV & FOOTER BACKGROUND (same style as About page) */
+.bg-primary-blue {
+  background-color: var(--primary-blue) !important;
+}
+
+/* Make navbar thicker (like About) */
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Explicit sticky style for navbar */
+.navbar.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Secondary brand button style */
+.btn-secondary-blue {
+  background-color: var(--secondary-blue);
+  color: #fff;
+  border: none;
+}
+.btn-secondary-blue:hover {
+  background-color: #2c4e8b;
+}
+
+/* ------------------------------------------------
+   HERO SECTION (Bootstrap carousel with images, overlay, centered caption)
+--------------------------------------------------- */
+.hero-section {
+  position: relative;
+}
+.hero-slide {
+  min-height: 60vh;
+  background-color: var(--primary-blue);
+  background-size: cover;
+  background-position: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+/* Ensure carousel images have the same height as contact page hero image */
+.hero-section .carousel-item img {
+  height: 80vh;
+  object-fit: cover;
+}
+/* Hero overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* Center carousel caption (text & CTA) */
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  z-index: 2;
+}
+
+/* ------------------------------------------------
+   ABOUT-HOME SECTION
+   (Marine Engineering Company on the RIGHT, image on the LEFT)
+--------------------------------------------------- */
+.about-home-section {
+  background-color: #fff;
+}
+.about-home-section img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------
+   DEALERSHIPS SECTION
+--------------------------------------------------- */
+.dealerships-section h2 {
+  font-weight: 700;
+}
+.dealerships-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* ------------------------------------------------
+   SERVICES SECTION
+   EXACT style from left screenshot with curved line background,
+   using a 4:5 aspect ratio for images
+--------------------------------------------------- */
+.services-home-section {
+  padding-top: 5rem; /* Increased spacing */
+  padding-bottom: 5rem; /* Increased spacing */
+  background: url("line.svg") center/cover no-repeat, var(--primary-blue);
+}
+.services-bg {
+  /* Empty placeholder */
+}
+.services-home-section .container {
+  position: relative;
+  z-index: 2;
+}
+.services-home-section .small-heading {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.services-home-section .fw-bold {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 4 / 5; /* 4:5 ratio */
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-overlay-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  z-index: 2;
+}
+.project-overlay-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  z-index: 2;
+}
+/* Dark overlay for all columns in services section */
+.project-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* New overlay class for overlay boxes: white background and black text */
+.overlay-white {
+  background-color: #fff !important;
+  color: #000 !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* ------------------------------------------------
+   REVIEWS SECTION (Carousel with extra top & bottom padding)
+--------------------------------------------------- */
+.reviews-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* ------------------------------------------------
+   FAQ SECTION (with visible background)
+--------------------------------------------------- */
+.faq-section {
+  background-color: var(--faq-blue);
+}
+.faq-section .small-heading {
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+.faq-item {
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.faq-question {
+  font-size: 1rem;
+}
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  user-select: none;
+}
+.faq-answer {
+  display: none; /* Hidden by default; toggled via JS */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+/* ------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+.footer-bottom {
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Prevent horizontal scroll on small devices if any element overflows */
+html, body {
+  overflow-x: hidden;
+}

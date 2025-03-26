@@ -2,11 +2,19 @@
    BOOTSTRAP OVERRIDES & CUSTOM CLASSES
 ---------------------------------------------- */
 
+/* Fix horizontal scrolling by preventing overflow */
+html, body {
+    overflow-x: hidden;
+}
+
 /* Brand colors */
 :root {
     --primary-blue: #1f438f;
     --secondary-blue: #3757a2;
     --light-bg: #f9fbf7;
+
+    /* NEW different blue shade for FAQ section */
+    --faq-blue: #2c4e8b;
 }
 
 /* NAV & FOOTER BACKGROUND */
@@ -36,7 +44,7 @@
 .hero-section {
     position: relative;
     background: url("contact-hero.jpg") center/cover no-repeat;
-    min-height: 60vh;
+    min-height: 80vh;
 }
 .hero-section .overlay {
     position: absolute;
@@ -70,8 +78,42 @@
 }
 
 /* -------------------------------------------
+   FAQ SECTION
+---------------------------------------------- */
+.faq-section {
+    background-color: var(--faq-blue); /* Different from footer */
+}
+.small-heading {
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+.faq-item {
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.faq-question {
+    font-size: 1rem;
+}
+.toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.faq-answer {
+    display: none; /* hidden by default; toggled via JS */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* -------------------------------------------
    FOOTER
 ---------------------------------------------- */
 footer h4 {
     margin-bottom: 10px;
+}
+
+/* Padding for bottom part */
+.footer-bottom {
+    padding-bottom: 1rem;
 }
