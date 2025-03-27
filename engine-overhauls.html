@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Stuart Marine Ltd - Engine Overhauls for boat engines, propeller shaft, bow thruster, and Volvo Penta company." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stuart Marine Ltd | Engine Overhauls</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Page-Specific CSS -->
+  <link rel="stylesheet" href="engine-overhauls.css" />
+</head>
+<body>
+
+  <!-- HEADER & NAVBAR (same style as other pages) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="index.html">
+          <img 
+            src="stuart-marine-logo.jpg" 
+            alt="Stuart Marine Logo" 
+            width="50" 
+            height="50" 
+            class="d-inline-block me-2 img-fluid"
+          />
+          <span class="d-none d-lg-inline">Stuart Marine</span>
+        </a>
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#mainNav" 
+          aria-controls="mainNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <!-- Dropdown for Services -->
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle active" 
+                href="#" 
+                id="servicesDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="routine-engine-service.html">Routine Engine Service</a></li>
+                <li><a class="dropdown-item" href="mobile-repair.html">Mobile Repair</a></li>
+                <li><a class="dropdown-item" href="welding-fabrication.html">Welding &amp; Fabrication</a></li>
+                <li><a class="dropdown-item" href="engine-overhauls.html">Engine Overhauls</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION WITH OVERLAY -->
+  <section class="hero-section d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-white position-relative">
+      <h1 class="display-3 fw-bold">Engine Overhauls &amp; Propeller Shaft Alignment</h1>
+      <h2 class="lead hero-subtitle mx-auto">
+        Comprehensive rebuilds for bow thruster systems, boat engines, and more—trusted by Volvo Penta company standards.
+      </h2>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: Intro + 3 Cards (similar style) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Our Engine Overhaul Services</h2>
+
+      <!-- Intro paragraphs with 4-5 SEO keywords -->
+      <div class="mb-4">
+        <p>
+          At Stuart Marine, our Engine Overhauls department specializes in breathing new life into <strong>boat engines</strong>—from 
+          minor tune-ups to complete disassembly and reassembly. Whether your <strong>propeller shaft</strong> needs realignment or 
+          your <strong>bow thruster</strong> system is underperforming, our skilled technicians ensure every component meets 
+          <strong>Volvo Penta company</strong> standards for safe, efficient <strong>marine servicing</strong>.
+        </p>
+        <p>
+          We handle diesel, petrol, inboard, and outboard engines—backed by years of experience and a commitment to quality that 
+          keeps your vessel running at peak performance.
+        </p>
+      </div>
+
+      <!-- 3 Cards for Overhaul Tiers -->
+      <div class="row g-4">
+        <!-- Basic Overhaul -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="basic-overhaul.jpg" 
+              class="card-img-top" 
+              alt="Basic Overhaul"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Basic Overhaul</h3>
+              <p class="card-text">
+                Ideal for engines needing minor internal checks, gasket replacements, and performance tuning—keeping you running smoothly.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Compression &amp; leak-down tests
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Minor seal &amp; gasket replacements
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Basic tune &amp; fluid checks
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Start a Basic Overhaul</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Overhaul -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="advanced-overhaul.jpg" 
+              class="card-img-top" 
+              alt="Advanced Overhaul"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Advanced Overhaul</h3>
+              <p class="card-text">
+                Comprehensive inspections, propeller shaft alignment, and advanced part replacements—restoring power and reliability.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Cylinder head rebuild &amp; regrind
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Propeller shaft balancing &amp; alignment
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Advanced tune-ups &amp; calibrations
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Go Advanced Overhaul</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete Rebuild -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="complete-rebuild.jpg" 
+              class="card-img-top" 
+              alt="Complete Engine Rebuild"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Complete Rebuild</h3>
+              <p class="card-text">
+                Our most extensive overhaul, involving total engine disassembly, bow thruster integration checks, and full marine servicing.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Full teardown &amp; part replacement
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Bow thruster performance checks
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Major mechanical &amp; electrical updates
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Request Complete Rebuild</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE STUART MARINE? (Wave section, same style) -->
+  <section class="py-5 wave-section text-white">
+    <div class="container">
+      <h2 class="mb-4 text-center">Why Choose Stuart Marine?</h2>
+      <div class="row text-center justify-content-center">
+        <div class="col-md-6 mb-4">
+          <i class="bi bi-gear-fill big-icon"></i>
+          <h3 class="mt-3">Engine Overhaul Experts</h3>
+          <p>
+            Our technicians excel in diagnosing and rebuilding <strong>boat engines</strong> of all types—ensuring every 
+            <strong>propeller shaft</strong> and <strong>bow thruster</strong> component is tuned to perfection under 
+            <strong>Volvo Penta company</strong> guidelines.
+          </p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <i class="bi bi-check-circle-fill big-icon"></i>
+          <h3 class="mt-3">Lasting Performance</h3>
+          <p>
+            We use high-quality parts and proven methods for each <strong>marine servicing</strong> job, maximizing engine life 
+            and efficiency. From minor fixes to complete overhauls, we stand behind our work so you can cruise with confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI GALLERY SECTION (Mosaic with 3 columns on large, 1 on mobile) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Recent Engine Overhauls</h2>
+      <div class="mosaic-gallery">
+        <!-- 6 images, 3 columns on large screens, 1 on mobile -->
+        <div class="mosaic-item">
+          <img src="engine-overhauls-3.jpg" alt="Engine Overhaul Project 1" />
+        </div>
+        <div class="mosaic-item">
+          <img src="engine-overhauls-4.jpg" alt="Engine Overhaul Project 2" />
+        </div>
+        <div class="mosaic-item">
+          <img src="engine-overhauls-5.jpg" alt="Engine Overhaul Project 3" />
+        </div>
+        <div class="mosaic-item">
+          <img src="engine-overhauls-6.jpg" alt="Engine Overhaul Project 4" />
+        </div>
+        <div class="mosaic-item">
+          <img src="engine-overhauls-7.jpg" alt="Engine Overhaul Project 5" />
+        </div>
+        <div class="mosaic-item">
+          <img src="engine-overhauls-8.jpg" alt="Engine Overhaul Project 6" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as other pages) -->
+  <footer class="bg-primary-blue text-white pt-4">
+    <div class="container">
+      <div class="row">
+        <!-- Address -->
+        <div class="col-md-4 mb-3">
+          <h4>Stuart Marine Ltd</h4>
+          <p>
+            Unit 18A Penrhos Industrial Estate<br>
+            Holyhead, Anglesey, UK, LL65 2FD
+          </p>
+          <p>
+            Phone: <a href="tel:07970705283" class="text-white text-decoration-none">07970 705283</a><br>
+            Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white text-decoration-none">info@stuartmarine.co.uk</a>
+          </p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Social Icons -->
+        <div class="col-md-4 mb-3">
+          <h4>Follow Us</h4>
+          <ul class="list-unstyled d-flex gap-3 mt-2">
+            <li>
+              <a 
+                href="https://www.facebook.com/people/Stuart-Marine/100057183290470" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.instagram.com/Clankie_" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.linkedin.com/in/stuart-cramp-7665461a3" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://g.co/kgs/zzsw94s" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-google"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3 footer-bottom">
+        © 2025 Stuart Marine Ltd<br>
+        <a 
+          href="https://www.cleandesignuk.com" 
+          target="_blank" 
+          class="text-white text-decoration-none"
+        >
+          Website design by Clean Design UK
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

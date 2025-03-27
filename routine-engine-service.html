@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Stuart Marine Ltd - Routine Engine Service for propeller shaft, bow thruster, and Volvo Penta company solutions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stuart Marine Ltd | Routine Engine Service</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Page-Specific CSS -->
+  <link rel="stylesheet" href="routine-engine-service.css" />
+</head>
+<body>
+
+  <!-- HEADER & NAVBAR (same style as other pages) -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="index.html">
+          <img 
+            src="stuart-marine-logo.jpg" 
+            alt="Stuart Marine Logo" 
+            width="50" 
+            height="50" 
+            class="d-inline-block me-2 img-fluid"
+          />
+          <span class="d-none d-lg-inline">Stuart Marine</span>
+        </a>
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#mainNav" 
+          aria-controls="mainNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <!-- Dropdown for Services -->
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle active" 
+                href="#" 
+                id="servicesDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="routine-engine-service.html">Routine Engine Service</a></li>
+                <li><a class="dropdown-item" href="mobile-repair.html">Mobile Repair</a></li>
+                <li><a class="dropdown-item" href="welding-fabrication.html">Welding &amp; Fabrication</a></li>
+                <li><a class="dropdown-item" href="engine-overhauls.html">Engine Overhauls</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION WITH OVERLAY -->
+  <section class="hero-section d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-white position-relative">
+      <h1 class="display-3 fw-bold">Routine Engine Service &amp; Propeller Shaft Upgrades</h1>
+      <h2 class="lead hero-subtitle mx-auto">
+        Trusted by Volvo Penta company owners and bow thruster specialists, our marine servicing keeps your boat engines running flawlessly.
+      </h2>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: Intro text + 3 Cards with CTA buttons -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Our Routine Engine Service Packages</h2>
+
+      <!-- Intro paragraphs -->
+      <div class="mb-4">
+        <p>
+          As with motor cars, boats are no different in that the engines require routine servicing and preventative maintenance 
+          to ensure fault-free and enjoyable sailing. Stuart Marine offers a variety of comprehensive service routines to meet 
+          the requirements of all engines. These options range from routine maintenance to spring commissioning and winter 
+          decommissioning, as per our customers’ request. All engine types are covered, from inboard, outboard, and stern drives.
+        </p>
+        <p>
+          Our grouped packages, as listed below, are all tailored to suit the requirements of your vessel. Whether you have a 
+          traditional sailboat or a modern <strong>bow thruster</strong>–equipped cruiser, we handle everything from <strong>propeller shaft</strong> 
+          repairs to advanced <strong>marine servicing</strong> that aligns with <strong>Volvo Penta company</strong> standards—ensuring your 
+          <strong>boat engines</strong> run at peak performance.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- BASIC SERVICE -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="basic-package.jpg" 
+              class="card-img-top" 
+              alt="Basic Service"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Basic Service</h3>
+              <p class="card-text">
+                Essential checks including oil, fuel filter replacements, and a quick propeller shaft inspection—perfect for seasonal upkeep.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Replace fuel filters
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Oil &amp; filter change
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Commission engine with serviced parts
+                </li>
+              </ul>
+              <!-- CTA button to Contact page with unique wording -->
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Book Basic Service</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GOLD SERVICE -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="gold-package.jpg" 
+              class="card-img-top" 
+              alt="Gold Service"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Gold Service</h3>
+              <p class="card-text">
+                Adds detailed bow thruster diagnostics, coolant checks, and advanced engine tune-ups—ideal for Volvo Penta company vessels.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Renew Transmission fluids
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Freshwater Cooling system drain &amp; replace
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Battery installation &amp; inspection
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Tune &amp; commission engine
+                </li>
+              </ul>
+              <!-- CTA button to Contact page with unique wording -->
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Request Gold Package</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLATINUM SERVICE -->
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <img 
+              src="platinum-package.jpg" 
+              class="card-img-top" 
+              alt="Platinum Service"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Platinum Service</h3>
+              <p class="card-text">
+                Our most comprehensive package, covering full propeller shaft repairs, major boat engines overhauls, and complete marine servicing.
+              </p>
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Includes all Basic &amp; Gold items
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Vessels Electrical system inspection
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Anodes replaced as necessary
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  Sea Cocks service &amp; replacement
+                </li>
+              </ul>
+              <!-- CTA button to Contact page with unique wording -->
+              <a href="contact.html" class="btn btn-secondary-blue mt-3">Go Platinum Today</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE STUART MARINE? (Thicker wave section with line curve background and icons) -->
+  <section class="py-5 wave-section text-white">
+    <div class="container">
+      <h2 class="mb-4 text-center">Why Choose Stuart Marine?</h2>
+      <div class="row text-center justify-content-center">
+        <div class="col-md-6 mb-4">
+          <!-- Big icon above text -->
+          <i class="bi bi-gear-fill big-icon"></i>
+          <h3 class="mt-3">Unmatched Routine Engine Service</h3>
+          <p>
+            Our expert team ensures every boat engine runs smoothly—focusing on precise propeller shaft alignment, 
+            accurate bow thruster calibration, and advanced checks for Volvo Penta company standards. Our marine servicing 
+            guarantees optimal performance and long-term reliability.
+          </p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <!-- Big icon above text -->
+          <i class="bi bi-check-circle-fill big-icon"></i>
+          <h3 class="mt-3">Positive Results Every Time</h3>
+          <p>
+            We deliver outstanding marine servicing with proven results. From thorough inspections of boat engines to complete 
+            routine engine service, our commitment to quality and customer satisfaction is backed by our expertise in propeller shaft 
+            repair and maintenance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINI GALLERY SECTION (Mosaic) -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Recent Projects</h2>
+      <div class="mosaic-gallery">
+        <!-- 6 images, masonry/column approach -->
+        <div class="mosaic-item">
+          <img src="routine-service-1.jpg" alt="Project 1" />
+        </div>
+        <div class="mosaic-item">
+          <img src="routine-engine-service-2.jpg" alt="Project 2" />
+        </div>
+        <div class="mosaic-item">
+          <img src="routine-service-6.jpg" alt="Project 3" />
+        </div>
+        <div class="mosaic-item">
+          <img src="routine-service-3.jpg" alt="Project 4" />
+        </div>
+        <div class="mosaic-item">
+          <img src="routine-service-4.jpg" alt="Project 5" />
+        </div>
+        <div class="mosaic-item">
+          <img src="routine-service-5.jpg" alt="Project 6" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as other pages with Bootstrap Icons for social media) -->
+  <footer class="bg-primary-blue text-white pt-4">
+    <div class="container">
+      <div class="row">
+        <!-- Address -->
+        <div class="col-md-4 mb-3">
+          <h4>Stuart Marine Ltd</h4>
+          <p>
+            Unit 18A Penrhos Industrial Estate<br>
+            Holyhead, Anglesey, UK, LL65 2FD
+          </p>
+          <p>
+            Phone: <a href="tel:07970705283" class="text-white text-decoration-none">07970 705283</a><br>
+            Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white text-decoration-none">info@stuartmarine.co.uk</a>
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="col-md-4 mb-3">
+          <h4>Follow Us</h4>
+          <ul class="list-unstyled d-flex gap-3 mt-2">
+            <li>
+              <a 
+                href="https://www.facebook.com/people/Stuart-Marine/100057183290470" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.instagram.com/Clankie_" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://www.linkedin.com/in/stuart-cramp-7665461a3" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a 
+                href="https://g.co/kgs/zzsw94s" 
+                class="text-white fs-4" 
+                target="_blank"
+              >
+                <i class="bi bi-google"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3 footer-bottom">
+        © 2025 Stuart Marine Ltd<br>
+        <a 
+          href="https://www.cleandesignuk.com" 
+          target="_blank" 
+          class="text-white text-decoration-none"
+        >
+          Website design by Clean Design UK
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

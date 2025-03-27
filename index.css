@@ -55,9 +55,30 @@ body {
   background-size: cover;
   background-position: center;
 }
-.carousel-control-prev,
-.carousel-control-next {
-  filter: invert(100%);
+/* Make arrows white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: none;
+  background-image: none;
+  width: 2rem;
+  height: 2rem;
+}
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin: 3px;
+}
+.carousel-control-prev-icon::after {
+  transform: rotate(135deg) translate(2px, -2px);
+}
+.carousel-control-next-icon::after {
+  transform: rotate(-45deg) translate(-2px, 2px);
 }
 /* Ensure carousel images have the same height as contact page hero image */
 .hero-section .carousel-item img {
@@ -97,6 +118,15 @@ body {
 /* ------------------------------------------------
    DEALERSHIPS SECTION
 --------------------------------------------------- */
+/* Remove card borders and increase logo size */
+.dealerships-section .card {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.dealerships-section .card img {
+  max-width: 200px !important; /* Make logos bigger */
+}
 .dealerships-section h2 {
   font-weight: 700;
 }
@@ -131,7 +161,6 @@ body {
 .services-home-section .fw-bold {
   text-align: center;
   color: #fff;
-  margin-bottom: 2rem;
 }
 .project-card {
   position: relative;
@@ -236,3 +265,19 @@ body {
 html, body {
   overflow-x: hidden;
 }
+
+/* -----------------------------------------------
+   ONLY CHANGES REQUESTED:
+   1) Stars in Reviews section are yellow
+   2) Arrow is dark grey
+------------------------------------------------- */
+.stars-inline i {
+  color: #FFD700; /* Yellow stars */
+}
+
+.arrow-icon {
+  color: #4f4f4f; /* Dark grey arrow */ 
+  font-size: 1rem;
+}
+
+.star-color {color: #FFD700;}

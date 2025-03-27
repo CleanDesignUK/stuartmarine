@@ -23,17 +23,16 @@
 </head>
 <body>
 
-  <!-- HEADER & NAVBAR (same style as About page) with sticky-top added -->
+  <!-- HEADER & NAVBAR (same style as other pages) -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="index.html">
-          <!-- Logo (img-fluid), only text on lg+ screens -->
           <img 
             src="stuart-marine-logo.jpg" 
             alt="Stuart Marine Logo" 
-            width="150" 
-            height="40" 
+            width="50" 
+            height="50" 
             class="d-inline-block me-2 img-fluid"
           />
           <span class="d-none d-lg-inline">Stuart Marine</span>
@@ -72,10 +71,10 @@
               <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                 <li><a class="dropdown-item" href="services.html">All Services</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Routine Engine Service</a></li>
-                <li><a class="dropdown-item" href="#">Mobile Repair</a></li>
-                <li><a class="dropdown-item" href="#">Welding &amp; Fabrication</a></li>
-                <li><a class="dropdown-item" href="#">Engine Overhauls</a></li>
+                <li><a class="dropdown-item" href="routine-engine-service.html">Routine Engine Service</a></li>
+                <li><a class="dropdown-item" href="mobile-repair.html">Mobile Repair</a></li>
+                <li><a class="dropdown-item" href="welding-fabrication.html">Welding &amp; Fabrication</a></li>
+                <li><a class="dropdown-item" href="engine-overhauls.html">Engine Overhauls</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -103,7 +102,9 @@
           <div class="hero-overlay"></div>
           <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
             <h1 class="display-5 fw-bold">Welcome to Stuart Marine</h1>
-            <p class="lead mb-4">Serving both leisure and commercial marine industries.</p>
+            <h2 class="lead hero-subtitle mx-auto">
+              Experts in Boat Engines &amp; Bow Thruster, serving both leisure and commercial marine industries.
+            </h2>
             <a href="services.html" class="btn btn-secondary-blue btn-lg">Our Services</a>
           </div>
         </div>
@@ -113,7 +114,9 @@
           <div class="hero-overlay"></div>
           <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
             <h1 class="display-5 fw-bold">Innovative Marine Solutions</h1>
-            <p class="lead mb-4">Expert engineering for your vessel’s needs.</p>
+            <h2 class="lead hero-subtitle mx-auto">
+              We are Volvo Penta Company Specialists and expert engineering for your vessel’s needs.
+            </h2>
             <a href="about.html" class="btn btn-secondary-blue btn-lg">Learn More</a>
           </div>
         </div>
@@ -123,7 +126,9 @@
           <div class="hero-overlay"></div>
           <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
             <h1 class="display-5 fw-bold">Contact Us</h1>
-            <p class="lead mb-4">We’re ready to discuss your marine projects.</p>
+            <h2 class="lead hero-subtitle mx-auto">
+              &gt;Contact us for propeller shaft &amp; new prop services, we’re ready to discuss your marine projects.
+            </h2>
             <a href="contact.html" class="btn btn-secondary-blue btn-lg">Get in Touch</a>
           </div>
         </div>
@@ -175,23 +180,23 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
         <!-- Example placeholders for logos -->
         <div class="col">
-          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
-            <img src="beta-marine-logo.jpg" alt="Beta Marine Logo" style="max-width: 100px;" />
+          <div class="card d-flex align-items-center justify-content-center">
+            <img src="beta-marine-logo.jpg" alt="Beta Marine Logo" />
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
-            <img src="mermaid-marine-logo.png" alt="Mermaid Marine Logo" style="max-width: 100px;" />
+          <div class="card d-flex align-items-center justify-content-center">
+            <img src="mermaid-marine-logo.png" alt="Mermaid Marine Logo" />
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
-            <img src="grfn_logoB.png" alt="Griffin Logo" style="max-width: 100px;" />
+          <div class="card d-flex align-items-center justify-content-center">
+            <img src="grfn_logoB.png" alt="Griffin Logo" />
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 p-3 d-flex align-items-center justify-content-center">
-            <img src="oxe-marine-logo.jpeg" alt="Oxe Marine Logo" style="max-width: 100px;" />
+          <div class="card d-flex align-items-center justify-content-center">
+            <img src="oxe-marine-logo.jpeg" alt="Oxe Marine Logo" />
           </div>
         </div>
       </div>
@@ -205,7 +210,12 @@
     <div class="container position-relative">
       <!-- Title & Subtitle -->
       <p class="text-uppercase small-heading mb-2">Services</p>
-      <h2 class="fw-bold mb-5">Explore Our Services</h2>
+      <h2 class="fw-bold mb-3">Explore Our Services</h2>
+      <!-- NEW SEO PARAGRAPH -->
+      <p class="text-white mb-5">
+        Whether you need boat engine repairs, bow thruster installation, or propeller shaft services, our
+        team offers comprehensive solutions to keep your vessel in peak condition.
+      </p>
       <!-- 3 columns with images & overlays -->
       <div class="row g-4">
         <!-- Column 1 -->
@@ -251,7 +261,22 @@
   <!-- REVIEWS SECTION (Carousel with multiple slides, increased top & bottom padding) -->
   <section class="reviews-section py-6">
     <div class="container">
-      <h2 class="text-center mb-4">Our Clients Speak</h2>
+
+      <!-- 5 Star Icons ABOVE the heading -->
+      <div class="stars stars-inline text-center mb-2">
+        <!-- 5 Star Icons -->
+        <i class="bi bi-star-fill star-color"></i>
+        <i class="bi bi-star-fill star-color"></i>
+        <i class="bi bi-star-fill star-color"></i>
+        <i class="bi bi-star-fill star-color"></i>
+        <i class="bi bi-star-fill star-color"></i>
+      </div>
+
+      <!-- Heading with Dark Grey Arrow -->
+      <h2 class="text-center mb-4">
+        Our Clients Speak
+      </h2>
+
       <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators -->
         <div class="carousel-indicators">
@@ -324,7 +349,7 @@
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon text-muted" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
