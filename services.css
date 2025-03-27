@@ -4,23 +4,116 @@
 
 /* Brand colors */
 :root {
-    --primary-blue: #1f438f;
-    --secondary-blue: #3757a2;
-    --light-bg: #f9fbf7;
-  }
-  
-  .bg-primary-blue {
-    background-color: var(--primary-blue) !important;
-  }
-  
-  /* Page-Specific Styles (Services page) */
-  section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  section ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-  }
-  
+  --primary-blue: #1f438f;
+  --secondary-blue: #3757a2;
+  --light-bg: #f9fbf7;
+}
+
+/* NAV & FOOTER BACKGROUND (same style as About page) */
+.bg-primary-blue {
+  background-color: var(--primary-blue) !important;
+}
+
+/* Make navbar thicker (like About page) */
+.navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Explicit sticky style for navbar */
+.navbar.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Secondary brand button style */
+.btn-secondary-blue {
+  background-color: var(--secondary-blue);
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-secondary-blue:hover {
+  background-color: #2c4e8b;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  background: url("about-hero.jpg") center/cover no-repeat; /* or a different hero image if desired */
+  min-height: 80vh;
+}
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.hero-section .container {
+  position: relative; /* Appear above overlay */
+  z-index: 2;
+}
+.hero-section h1 {
+  margin: 0;
+  padding: 80px 0 10px; /* reduced bottom padding */
+}
+.hero-subtitle {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* SERVICE CARDS */
+.service-card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Base typography for sections */
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* CTA Section styling */
+.cta-section {
+  background-color: #2c4e8b !important; /* Different shade of blue */
+  border-radius: 0;                    /* No rounded corners */
+  margin: 0;                           /* No extra bottom margin */
+}
+.cta-section .container-fluid {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+/* New class to constrain text width within CTA */
+.cta-text {
+  max-width: 600px;
+}
+.cta-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.cta-section p {
+  font-size: 1rem;
+}
+.cta-section img {
+  max-width: 100%;
+  border-radius: 6px;
+}

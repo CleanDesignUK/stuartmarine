@@ -17,12 +17,21 @@
   <link rel="stylesheet" href="services.css" />
 </head>
 <body>
-
-  <!-- HEADER & NAVBAR -->
+  <!-- HEADER & NAVBAR (sticky-top, adapted to highlight Services) -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue sticky-top">
       <div class="container">
-        <a class="navbar-brand fw-bold text-uppercase" href="index.html">Stuart Marine</a>
+        <a class="navbar-brand d-flex align-items-center fw-bold text-uppercase" href="index.html">
+          <!-- Logo (img-fluid), only text on lg+ screens -->
+          <img 
+            src="stuart-marine-logo.jpg" 
+            alt="Stuart Marine Logo" 
+            width="150" 
+            height="40" 
+            class="d-inline-block me-2 img-fluid"
+          />
+          <span class="d-none d-lg-inline">Stuart Marine</span>
+        </a>
         <button 
           class="navbar-toggler" 
           type="button" 
@@ -42,8 +51,26 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="services.html">Services</a>
+            <!-- Dropdown for Services -->
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle active" 
+                href="#" 
+                id="servicesDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#routine-engine-service">Routine Engine Service</a></li>
+                <li><a class="dropdown-item" href="#mobile-repair">Mobile Repair</a></li>
+                <li><a class="dropdown-item" href="#welding-fabrication">Welding &amp; Fabrication</a></li>
+                <li><a class="dropdown-item" href="#engine-overhauls">Engine Overhauls</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
@@ -54,96 +81,128 @@
     </nav>
   </header>
 
-  <!-- PAGE CONTENT -->
+  <!-- HERO SECTION WITH OVERLAY -->
+  <section class="hero-section d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-white position-relative">
+      <h1 class="display-5 fw-bold">Our Services</h1>
+      <p class="hero-subtitle lead mx-auto">
+        At Stuart Marine, we pride ourselves on delivering comprehensive marine services tailored to your vessel’s needs. 
+        Whether you’re seeking routine engine maintenance or a complete overhaul, our experienced team is ready to help.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: SERVICES CARDS -->
   <section class="py-5">
     <div class="container">
-      <h1 class="mb-4">Our Services</h1>
-      <p>
-        Just like motor cars, boat engines require routine servicing and preventative maintenance. Stuart Marine offers
-        a comprehensive range of service routines covering all engine types—diesel, petrol inboard, outboard, and stern drives.
-      </p>
-      <p>
-        We also perform spring commissioning and winter decommissioning. Our service packages are tailored to suit the
-        requirements of your vessel, from Basic service to Platinum packages.
-      </p>
-      <div class="mt-4">
-        <h2>Basic Service Schedule</h2>
-        <ul>
-          <li>Replace fuel filters</li>
-          <li>Oil &amp; filter change</li>
-          <li>Commission the engine with serviced parts</li>
-        </ul>
+      <h2 class="mb-5 text-center">Explore Our Offerings</h2>
+      <div class="row g-4">
+        <!-- Card 1: Routine Engine Service -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-3 text-center" id="routine-engine-service">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Routine+Engine+Service" 
+              alt="Routine Engine Service" 
+              class="img-fluid mb-3 rounded"
+            />
+            <h3 class="service-title mb-2">Routine Engine Service</h3>
+            <p class="service-desc">
+              Includes our Basic, Gold, and Platinum packages for comprehensive engine maintenance and seasonal checks.
+            </p>
+            <a href="routine-engine-service.html" class="btn btn-secondary-blue">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Mobile Repair -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-3 text-center" id="mobile-repair">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Mobile+Repair" 
+              alt="Mobile Repair" 
+              class="img-fluid mb-3 rounded"
+            />
+            <h3 class="service-title mb-2">Mobile Repair</h3>
+            <p class="service-desc">
+              Our team can travel to your location for on-site engine repairs, ensuring quick turnaround and minimal downtime.
+            </p>
+            <a href="mobile-repair.html" class="btn btn-secondary-blue">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Welding & Fabrication -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-3 text-center" id="welding-fabrication">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Welding+%26+Fabrication" 
+              alt="Welding and Fabrication" 
+              class="img-fluid mb-3 rounded"
+            />
+            <h3 class="service-title mb-2">Welding &amp; Fabrication</h3>
+            <p class="service-desc">
+              From minor hull repairs to custom metalwork, we offer professional welding and fabrication solutions.
+            </p>
+            <a href="welding-fabrication.html" class="btn btn-secondary-blue">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Engine Overhauls -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-3 text-center" id="engine-overhauls">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Engine+Overhauls" 
+              alt="Engine Overhauls" 
+              class="img-fluid mb-3 rounded"
+            />
+            <h3 class="service-title mb-2">Engine Overhauls</h3>
+            <p class="service-desc">
+              Complete teardown, inspection, and rebuild of your engine to restore performance and extend its lifespan.
+            </p>
+            <a href="engine-overhauls.html" class="btn btn-secondary-blue">Learn More</a>
+          </div>
+        </div>
       </div>
-      <div class="mt-4">
-        <h2>Gold Service Schedule</h2>
-        <ul>
-          <li>Includes all in the Basic Service</li>
-          <li>Renew Transmission Fluids</li>
-          <li>Freshwater Cooling System drain &amp; refill</li>
-          <li>Battery installation &amp; inspection</li>
-          <li>Engine tuning &amp; commissioning</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- CTA Section below 'Explore Our Offerings' -->
+  <section class="cta-section py-5 text-white">
+    <div class="container-fluid px-4">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 cta-text">
+          <h2 class="mb-3">Ready to Keep Your Vessel in Top Condition?</h2>
+          <p class="mb-4">
+            At Stuart Marine, we handle every aspect of marine maintenance—from routine servicing to major repairs.
+            Trust our experienced team to keep your boat safe, reliable, and ready for the water.
+          </p>
+          <a href="contact.html" class="btn btn-secondary-blue">Contact Us</a>
+          <div class="row mt-4">
+            <div class="col-4">
+              <h3>20+</h3>
+              <p class="mb-0">Years of Experience</p>
+            </div>
+            <div class="col-4">
+              <h3>700+</h3>
+              <p class="mb-0">Projects Completed</p>
+            </div>
+            <div class="col-4">
+              <h3>99%</h3>
+              <p class="mb-0">Client Satisfaction Rate</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img 
+            src="https://via.placeholder.com/600x400?text=Marine+Maintenance" 
+            alt="Marine Maintenance" 
+            class="img-fluid rounded"
+          />
+        </div>
       </div>
-      <div class="mt-4">
-        <h2>Platinum Service Schedule</h2>
-        <ul>
-          <li>Full out / in water service</li>
-          <li>Electrical system inspection</li>
-          <li>Anodes inspection &amp; replacement</li>
-          <li>Sea cocks service &amp; replacement</li>
-          <li>All Basic &amp; Gold package inclusions</li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <section class="py-3">
-    <div class="container">
-      <h2 class="mb-4">Engine Repairs &amp; New Installations</h2>
-      <p>
-        We carry out all manner of engine repairs, from minor fixes to major overhauls. Our workshop is equipped
-        to handle diesel engines, petrol inboards, and outboards, following the relevant manufacturer guidelines.
-      </p>
-      <p>
-        Stuart Marine is a main dealer for Beta Marine and Mermaid Marine. We can also supply a full range of Volvo
-        Penta engines and handle Mercruiser servicing. Our new engine installations include careful evaluation of
-        the vessel, ensuring safe placement and operation.
-      </p>
-    </div>
-  </section>
-
-  <section class="py-3">
-    <div class="container">
-      <h2 class="mb-4">Dealerships &amp; Partnerships</h2>
-      <ul>
-        <li>Main Agents for Mermaid Marine, Baudoui, Sole Marine, Hyundai Seasall, Selva Outboards, Hertz Marine Audio</li>
-        <li>Registered Beta Marine installers</li>
-        <li>Independent Volvo Penta Specialist</li>
-        <li>Griffin Filters</li>
-        <li>OXE Marine outboards (diesel powered)</li>
-      </ul>
-      <p>
-        We will gladly source the necessary parts and components you need. Ask us about any specific engine brand
-        or setup you require.
-      </p>
-    </div>
-  </section>
-
-  <section class="py-3">
-    <div class="container">
-      <h2 class="mb-4">Refit, Repower &amp; More</h2>
-      <p>
-        From bow thruster installations to repowering vessels with diesel engines, we have documented numerous
-        successful projects—serving both commercial operators and leisure boat owners. Our team can tackle
-        hydraulic problems, pot hauler repairs, and more.
-      </p>
-      <p>
-        Let us help you keep your vessel in top condition.
-      </p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- FOOTER (same style as your original code) -->
   <footer class="bg-primary-blue text-white pt-4">
     <div class="container">
       <div class="row">
