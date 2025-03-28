@@ -124,15 +124,19 @@ body {
   background: transparent !important;
   box-shadow: none !important;
 }
+/* 
+   These changes ensure the logos line up nicely,
+   remain centered in their columns, and have a uniform height 
+*/
+.dealerships-section .card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 200px; /* So each 'card' is tall enough for the logos */
+}
 .dealerships-section .card img {
-  max-width: 200px !important; /* Make logos bigger */
-}
-.dealerships-section h2 {
-  font-weight: 700;
-}
-.dealerships-section p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  max-height: 200px !important; /* Uniform height for logos */
+  object-fit: contain;
 }
 
 /* ------------------------------------------------
@@ -280,4 +284,6 @@ html, body {
   font-size: 1rem;
 }
 
-.star-color {color: #FFD700;}
+.star-color {
+  color: #FFD700;
+}

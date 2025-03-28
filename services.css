@@ -94,8 +94,9 @@ section ul {
 }
 
 /* CTA Section (centered, margin & padding, flex) */
+/* Changed background color to #2655b8 as requested */
 .cta-section {
-  background-color: #2c4e8b !important;
+  background-color: #2655b8 !important;
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
