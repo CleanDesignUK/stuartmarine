@@ -18,7 +18,14 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  
+  nav.navbar {
+  position: fixed !important;  /* pin it */
+  top: 0 !important;           /* at the very top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;               /* above everything else */
+}
   /* HERO SECTION */
   .hero-section {
     position: relative;
@@ -103,34 +110,45 @@
     display: block;
   }
   
-  /* MINI GALLERY (Masonry/Column approach) */
+/* MINI GALLERY (Masonry/Column approach) */
+.mosaic-gallery {
+  column-count: 3;            /* 3 columns */
+  column-gap: 1rem;           /* gutter */
+  -webkit-column-fill: balance;  /* Chrome/Safari */
+  column-fill: balance;          /* Firefox/Edge */
+}
+
+.mosaic-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+}
+
+/* images as before */
+.mosaic-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+}
+
+/* mobile fallback */
+@media (max-width: 576px) {
   .mosaic-gallery {
-    column-count: 3;       /* 3 columns for a masonry style */
-    column-gap: 1rem;      /* horizontal gap between columns */
+    column-count: 1;
   }
-  .mosaic-item {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    position: relative;
-  }
-  .mosaic-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.25rem;
-  }
-  
-  /* On mobile, show 1 image per column */
-  @media (max-width: 576px) {
-    .mosaic-gallery {
-      column-count: 1;
-    }
-  }
+}
+
   
   /* FOOTER BOTTOM */
   .footer-bottom {
     padding-bottom: 1rem;
   }
-  
+  footer .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

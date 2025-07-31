@@ -26,13 +26,14 @@ body {
   padding-bottom: 1rem;
 }
 
-/* Explicit sticky style for navbar */
-.navbar.sticky-top {
-  position: sticky !important;
-  top: 0;
-  z-index: 1030;
+nav.navbar {
+  position: fixed !important;  /* pin it */
+  top: 0 !important;           /* at the very top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;               /* above everything else */
 }
-
 /* Secondary brand button style */
 .btn-secondary-blue {
   background-color: var(--secondary-blue);
@@ -49,6 +50,7 @@ body {
 .hero-section {
   position: relative;
 }
+
 .hero-slide {
   min-height: 60vh;
   background-color: var(--primary-blue);
@@ -149,9 +151,7 @@ body {
   padding-bottom: 5rem; /* Increased spacing */
   background: url("line.svg") center/cover no-repeat, var(--primary-blue);
 }
-.services-bg {
-  /* Empty placeholder */
-}
+
 .services-home-section .container {
   position: relative;
   z-index: 2;

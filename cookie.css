@@ -1,0 +1,94 @@
+/* cookie.css */
+#cookie-banner {
+  display: none;               /* shown by JS if no consent found */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3757a2;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  z-index: 10000;
+}
+
+#cookie-banner p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+#cookie-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#cookie-banner .buttons {
+  text-align: center;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+}
+
+#cookie-banner .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+#cookie-banner .btn.accept {
+  background: #1f438f;
+  color: #fff;
+}
+
+#cookie-banner .btn.decline {
+  background: #fff;
+  color: #000;
+}
+/* ----------------------
+   SMALL SCREENS (≤576px)
+   ---------------------- */
+@media (max-width: 576px) {
+  #cookie-banner {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    width: auto;
+    max-width: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+  #cookie-banner p {
+    font-size: 0.85rem;
+  }
+  #cookie-banner .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  #cookie-banner .btn {
+    width: auto;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    box-sizing: border-box; 
+  }
+}
+
+/* -----------------------
+   MEDIUM SCREENS (577–768px)
+   ----------------------- */
+@media (min-width: 577px) and (max-width: 768px) {
+  #cookie-banner {
+    max-width: 90%;
+    padding: 1rem;
+  }
+}

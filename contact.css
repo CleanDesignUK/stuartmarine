@@ -27,7 +27,14 @@ html, body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-
+nav.navbar {
+  position: fixed !important;  /* pin it */
+  top: 0 !important;           /* at the very top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;               /* above everything else */
+}
 /* Secondary brand button style */
 .btn-secondary-blue {
     background-color: var(--secondary-blue);
@@ -116,4 +123,62 @@ footer h4 {
 /* Padding for bottom part */
 .footer-bottom {
     padding-bottom: 1rem;
+}
+/* Hours Widget Wrapper */
+.hours-widget {
+  background: #f8f9fa;
+  border-radius: .5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+
+
+/* Override Bootstrap accordion button */
+.hours-widget .accordion-button {
+  background: #ffffff;
+  color: var(--dark);
+  border: 1px solid #dee2e6;
+  border-radius: .375rem;
+  margin-bottom: .5rem;
+  padding: .75rem 1rem;
+  transition: background .2s, box-shadow .2s;
+  display: flex;
+  align-items: center;
+}
+
+/* Button hover/focus */
+.hours-widget .accordion-button:hover,
+.hours-widget .accordion-button:focus {
+  background: #e9ecef;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Expanded state */
+.hours-widget .accordion-button:not(.collapsed) {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
+/* Clock icon color */
+.hours-widget .accordion-button .bi-clock-fill {
+  font-size: 1.1rem;
+  color: inherit;
+}
+
+/* List styling */
+.hours-list li {
+  padding: .5rem 1rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  gap: .5rem;
+}
+.hours-list li:first-child {
+  border-top: none;
+}
+
+/* Day name styling */
+.hours-list strong {
+  width: 3rem;
+  color: var(--primary-blue);
 }

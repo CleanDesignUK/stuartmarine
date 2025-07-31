@@ -5,6 +5,13 @@
   <meta name="description" content="Stuart Marine Ltd - Routine Engine Service for propeller shaft, bow thruster, and Volvo Penta company solutions." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stuart Marine Ltd | Routine Engine Service</title>
+<!-- FAVICONS -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="stuart-marine-logo.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="stuart-marine-logo.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="msapplication-TileColor" content="#1f438f">
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
 
   <!-- Bootstrap CSS -->
   <link 
@@ -17,9 +24,16 @@
 
   <!-- Page-Specific CSS -->
   <link rel="stylesheet" href="routine-engine-service.css" />
+  <link rel="stylesheet" href="cookie.css">
 </head>
 <body>
-
+<div id="cookie-banner">
+  <p>🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic. By clicking “<strong>Accept All</strong>”, you consent to our use of cookies. See our <a href="cookie-policy.html">Cookie Policy</a> for details.</p>
+  <div class="buttons">
+    <button id="accept-cookies" class="btn accept">Accept All 🍪</button>
+    <button id="decline-cookies" class="btn decline">Decline</button>
+  </div>
+</div>
   <!-- HEADER & NAVBAR (same style as other pages) -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary-blue">
@@ -105,7 +119,7 @@
           decommissioning, as per our customers’ request. All engine types are covered, from inboard, outboard, and stern drives.
         </p>
       </div>
-
+    </section>
       <div class="row g-4">
         <!-- BASIC SERVICE 
         <div class="col-md-4">
@@ -270,94 +284,96 @@
     </div>
   </section>
 
-  <!-- FOOTER (same as other pages with Bootstrap Icons for social media) -->
-  <footer class="bg-primary-blue text-white pt-4">
-    <div class="container">
-      <div class="row">
-        <!-- Address -->
-        <div class="col-md-4 mb-3">
-          <h4>Stuart Marine Ltd</h4>
-          <p>
-            Unit 18A Penrhos Industrial Estate<br>
-            Holyhead, Anglesey, UK, LL65 2FD
-          </p>
-          <p>
-            Phone: <a href="tel:07970705283" class="text-white text-decoration-none">07970 705283</a><br>
-            Email: <a href="mailto:info@stuartmarine.co.uk" class="text-white text-decoration-none">info@stuartmarine.co.uk</a>
-          </p>
-        </div>
+  <!-- FOOTER (same style as About page) -->
+<footer class="bg-primary-blue text-white pt-4">
+  <div class="container">
+    <div class="row">
+      <!-- Contact & Hours -->
+      <div class="col-md-4 mb-3">
+        <h4>Stuart Marine Ltd</h4>
+        <p>
+          <i class="bi bi-geo-alt me-2"></i>
+          Unit 18A Penrhos Industrial Estate<br>
+          Holyhead, Anglesey, UK, LL65 2FD
+        </p>
+        <p>
+          <i class="bi bi-telephone me-2"></i>
+          <a href="tel:07970705283" class="text-white text-decoration-none">07970 705283</a><br>
+          <i class="bi bi-envelope me-2"></i>
+          <a href="mailto:info@stuartmarine.co.uk" class="text-white text-decoration-none">info@stuartmarine.co.uk</a>
+        </p>
+        <p class="mb-0"><strong>Opening Hours</strong></p>
+        <p class="mb-0"><strong>Mon – Fri:</strong> 09:00 – 17:00</p>
+        <p class="mb-0"><strong>Sat – Sun:</strong> Closed</p>
+      </div>
 
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h4>Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
         <!-- Quick Links -->
-        <div class="col-md-4 mb-3">
-          <h4>Quick Links</h4>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-            <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-          </ul>
-        </div>
+      <div class="col-md-4 mb-3">
+        <h4>Policies</h4>
+        <ul class="list-unstyled">
+          <li><a href="cookie-policy.html" class="text-white text-decoration-none">Cookie Policy</a></li>
+          <li><a href="privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+      </div>
 
-        <!-- Social Media Icons -->
-        <div class="col-md-4 mb-3">
-          <h4>Follow Us</h4>
-          <ul class="list-unstyled d-flex gap-3 mt-2">
-            <li>
-              <a 
-                href="https://www.facebook.com/people/Stuart-Marine/100057183290470" 
-                class="text-white fs-4" 
-                target="_blank"
-              >
-                <i class="bi bi-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://www.instagram.com/Clankie_" 
-                class="text-white fs-4" 
-                target="_blank"
-              >
-                <i class="bi bi-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://www.linkedin.com/in/stuart-cramp-7665461a3" 
-                class="text-white fs-4" 
-                target="_blank"
-              >
-                <i class="bi bi-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a 
-                href="https://g.co/kgs/zzsw94s" 
-                class="text-white fs-4" 
-                target="_blank"
-              >
-                <i class="bi bi-google"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <!-- Social Media Icons -->
+      <div class="col-md-4 mb-3">
+        <h4>Follow Us</h4>
+        <ul class="list-unstyled d-flex gap-3 mt-2">
+          <li>
+            <a href="https://www.facebook.com/people/Stuart-Marine/100057183290470" class="text-white fs-4" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/Clankie_" class="text-white fs-4" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/stuart-cramp-7665461a3" class="text-white fs-4" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://g.co/kgs/zzsw94s" class="text-white fs-4" target="_blank">
+              <i class="bi bi-google"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/your-channel-url" class="text-white fs-4" target="_blank">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </li>
+        </ul>
+        
       </div>
-      <div class="text-center mt-3 footer-bottom">
-        © 2025 Stuart Marine Ltd<br>
-        <a 
-          href="https://www.cleandesignuk.com" 
-          target="_blank" 
-          class="text-white text-decoration-none"
-        >
-          Website design by Clean Design UK
-        </a>
-      </div>
+      
     </div>
-  </footer>
 
+    <div class="text-center mt-3 footer-bottom">
+      © 2025 Stuart Marine Ltd<br>
+      <a href="https://www.cleandesignuk.com" target="_blank" class="text-white text-decoration-none">
+        Website design by Clean Design UK
+      </a>
+    </div>
+  </div>
+</footer>
   <!-- Bootstrap JS -->
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous">
   </script>
+  <script src="cookie.js"></script>
 </body>
 </html>

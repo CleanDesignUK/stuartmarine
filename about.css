@@ -24,7 +24,14 @@ html, body {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
+nav.navbar {
+  position: fixed !important;  /* pin it */
+  top: 0 !important;           /* at the very top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;               /* above everything else */
+}
 /* Secondary brand button style (same as contact) */
 .btn-secondary-blue {
   background-color: var(--secondary-blue);
@@ -78,9 +85,7 @@ html, body {
   color: #fff;
   position: relative;
 }
-.icon-container {
-  /* for styling big icons if needed */
-}
+
 
 /* WHAT WE'RE OFFERING SECTION (only the main image now; secondary removed) */
 .offering-main-img {

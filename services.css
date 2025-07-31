@@ -20,11 +20,13 @@
   padding-bottom: 1rem;
 }
 
-/* Explicit sticky style for navbar */
-.navbar.sticky-top {
-  position: sticky !important;
-  top: 0;
-  z-index: 1030;
+nav.navbar {
+  position: fixed !important;  /* pin it */
+  top: 0 !important;           /* at the very top */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1030;               /* above everything else */
 }
 
 /* Secondary brand button style */
